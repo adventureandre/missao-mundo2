@@ -1,0 +1,146 @@
+@import "src/styles/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-stack;
+  box-sizing: border-box;
+}
+
+body {
+  background: $body-bg-color;
+
+  a, svg {
+    transition: .4s
+  }
+}
+
+.main_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-size: 2em;
+
+  .title {
+    color: $text-color;
+  }
+}
+
+
+
+.main_todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .row {
+    border-radius: 4px;
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    flex-basis: 100%;
+    background: #f3eeee;
+
+
+    input[type="text"] {
+      background: #f3eeee;
+      border: none;
+      font-size: 0.875em;
+      color: #4f4d4d;
+      min-width: 70%;
+    }
+
+    //Criar ckeck personalizado
+    .custom-checkbok{
+      width: 50px;
+      input{
+        display: none;
+      }
+
+      input + label:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background-color: #858383;
+        display: inline-block;
+        border: 1px solid gray;
+        vertical-align: middle;
+        margin-right: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .custom-checkbok input:checked + label:before{
+      background: url("ok.svg");
+      background-size: 17px;
+      background-color: #858383;
+    }
+
+    //Icones
+    .icon {
+      width: 50px;
+      color: #8a8787;
+      background: none;
+      font-size: 0.775em;
+      margin-right: 5px;
+    }&:hover{
+       cursor: pointer;
+     }
+
+    .icon-red{
+      color: red;
+      padding-right: 5px;
+    }
+    .icon-yellow{
+      color: yellow;
+      padding-right: 5px;
+    }
+    .icon-green{
+      color: green;
+    }
+
+    //Descricao tarefa aberta
+    .main_desc{
+      .desc_tarefas{
+        border-top: 1px solid #5e5c5c;
+        display: flex;
+        justify-content:space-around;
+      }
+
+      div{
+        flex-basis: 48%;
+        span{
+          color: $text-color2;
+          font-size: 0.734em;
+        }
+
+        textarea{
+          background: $bg-color-secondary;
+          width: 100%;
+          font-size: 0.734em;
+          color:$text-color2 ;
+        }
+        select{
+          width: 100%;
+          background: $bg-color-secondary;
+          color: $text-color2;
+          font-size: 0.734em;
+        }
+
+      }
+    }
+  }
+
+  .relevancia-importante {
+    border-left: 5px solid #ead608;
+  }
+
+  .relevancia-urgente {
+    border-left: 5px solid #dc0303;
+  }
+}
