@@ -10,7 +10,6 @@ const MainComponent = () => {
                 <Tarefas id='1' relevancia='importante' title="Tarefas da Estacio!"/>
                 <Tarefas id='2' relevancia='urgente' title='Tarefas do dia dia!'/>
                 {/*<TarefasOpen id='3' relevancia='normal' title='Tarefas Aberta'/>*/}
-
             </div>
     )
 }
