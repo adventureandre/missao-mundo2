@@ -5,7 +5,7 @@ import TarefasOpen from "./TarefasOpen";
 
 const MainComponent = () => {
     return (
-            <div className='main_todo w-75 mt-5'>
+            <div className='main_todo w-9/12 mt-5'>
                 <InputNovaTarefa/>
                 <Tarefas id='1' relevancia='importante' title="Tarefas da Estacio!"/>
                 <Tarefas id='2' relevancia='urgente' title='Tarefas do dia dia!'/>
