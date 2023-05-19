@@ -5,6 +5,7 @@ import {FiEdit} from "react-icons/fi";
 import {BsCheckSquare} from "react-icons/bs";
 
 const Tarefas = (props)=>{
+
     return(
         <div className={`relevancia-${props.relevancia} row flex items-center w-full mb-3`} key={props.id}>
             <FcMenu className="w-1/12 mt-2 icon" />
@@ -19,6 +20,8 @@ const Tarefas = (props)=>{
                 <BsCheckSquare className="mt-2 icon icon-green" />
             </div>
         </div>
+        
+ 
     );
 }
 
