@@ -3,6 +3,7 @@ import {FcMenu} from "react-icons/fc";
 import {GoTrashcan} from "react-icons/go";
 import {FiEdit} from "react-icons/fi";
 import {BsCheckSquare} from "react-icons/bs";
+import TarefasOpen from "./TarefasOpen";
 
 const Tarefas = (props)=>{
 
@@ -15,13 +16,14 @@ const Tarefas = (props)=>{
             </div>
             <input className="w-9/12" type="text" value={props.title} placeholder="Nova tarefa..." />
             <div className="w-1/12 flex justify-end">
-                <GoTrashcan className="mt-2 icon icon-red" />
-                <FiEdit className="mt-2 icon icon-yellow" />
+                <GoTrashcan className="mt-2 icon icon-red"/>
+                <FiEdit 
+                className="mt-2 icon icon-yellow" 
+                onClick={()=>props.handleEdit(props.id, props.relevancia, props.title)}
+                />
                 <BsCheckSquare className="mt-2 icon icon-green" />
             </div>
         </div>
-        
- 
     );
 }
 
