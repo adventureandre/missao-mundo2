@@ -7,16 +7,28 @@ import TarefasOpen from "./TarefasOpen";
 
 const MainComponent = () => {
 
-    const editTask = (id, relevancia, title) => {
-        if(id){
-           return <TarefasOpen id={id} relevancia= {relevancia} title={title}/>
-        } else {
-            return ('teste')
-        }
-    };
-
     const [listaTarefas, setListaTarefas] = useState([{'id':1, 'relevancia':'importante', 'title':"Tarefas da Estacio!"},
     {'id':2, 'relevancia':'urgente', 'title':'Tarefas do dia dia!'}])
+
+    const [itemContent, setItemContent] = useState('')
+
+    // Abrir a tarefa para edição
+    const editTask = (id, relevancia, title) => {
+        if(id){
+            setItemContent(<TarefasOpen id={id} relevancia= {relevancia} title={title} salvar={salvar}/>)
+        }
+    }
+
+    // Fechar a edição (não está salvando alterações ainda)
+    const salvar = (id, relevancia, title) => {
+        //let tarefaEditada = {'id': id, 'relevancia':relevancia, 'title':title}
+        //let novaListaTarefas = listaTarefas.filter((tarefa)=> tarefa.id !== id )
+        //novaListaTarefas.push(tarefaEditada)
+        //console.log(novaListaTarefas)
+        //setListaTarefas(novaListaTarefas)
+       //console.log(listaTarefas)
+        setItemContent('')
+    }
 
     return (
             <div className='main_todo w-9/12 mt-5'>
@@ -29,11 +41,7 @@ const MainComponent = () => {
                     handleEdit={editTask} 
                     />    
                 ))}
-                    <div>
-                      {/*<TarefasOpen id={editTask.id} relevancia= {editTask} title={editTask()}/>*/}
-                      {editTask()}
-                    </div>
-                 
+                {itemContent}
             </div>
     )
 }

@@ -12,7 +12,10 @@ const TarefasOpen = (props)=>{
             </div>
             <input className='col-sm-9 ' type='text' value={props.title} placeholder="Nova tarefa..."/>
             <div className='col-sm-1 d-flex justify-content-end '>
-                <GiReturnArrow className='mt-2 icon '/>
+                <GiReturnArrow 
+                className='mt-2 icon '
+                onClick={()=>props.salvar(props.id, props.relevancia, props.title)}
+                />
             </div>
             <div className='main_desc'>
                 <section className='desc_tarefas w-100'>
