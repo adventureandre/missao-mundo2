@@ -3,7 +3,6 @@ import {FcMenu} from "react-icons/fc";
 import {GoTrashcan} from "react-icons/go";
 import {FiEdit} from "react-icons/fi";
 import {BsCheckSquare} from "react-icons/bs";
-import TarefasOpen from "./TarefasOpen";
 
 const Tarefas = (props)=>{
 
