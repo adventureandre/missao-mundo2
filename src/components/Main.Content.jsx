@@ -10,14 +10,7 @@ const MainComponent = () => {
     const [listaTarefas, setListaTarefas] = useState([{'id':1, 'relevancia':'importante', 'title':"Tarefas da Estacio!"},
     {'id':2, 'relevancia':'urgente', 'title':'Tarefas do dia dia!'}])
 
-    const [itemContent, setItemContent] = useState('')
 
-    // Abrir a tarefa para edição
-    const editTask = (id, relevancia, title) => {
-        if(id){
-            setItemContent(<TarefasOpen id={id} relevancia= {relevancia} title={title} salvar={salvar}/>)
-        }
-    }
 
     // Fechar a edição (não está salvando alterações ainda)
     const salvar = (id, relevancia, title) => {
@@ -37,11 +30,9 @@ const MainComponent = () => {
                     <Tarefas 
                     id={tarefa.id} 
                     relevancia={tarefa.relevancia} 
-                    title={tarefa.title} 
-                    handleEdit={editTask} 
+                    title={tarefa.title}
                     />    
                 ))}
-                {itemContent}
             </div>
     )
 }

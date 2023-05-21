@@ -1,0 +1,33 @@
+.main_desc{
+  background: #f1eced;
+  display: inline-block;
+  width: 100%;
+
+  .desc_tarefas{
+    border-top: 1px solid #b4b0b0;
+    display: flex;
+    justify-content:space-around;
+  }
+
+  div{
+    flex-basis: 48%;
+    span{
+      color: $text-color2;
+      font-size: 0.734em;
+    }
+
+    textarea{
+      background: #ccc;
+      width: 100%;
+      font-size: 0.734em;
+      color:$text-color2 ;
+    }
+    select{
+      width: 100%;
+      background: #ccc;
+      color: $text-color2;
+      font-size: 0.734em;
+    }
+
+  }
+}

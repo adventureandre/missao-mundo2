@@ -1,4 +1,5 @@
 @import "src/styles/variables";
+@import "ComponentsStyle/tarefaOpen";
 
 * {
   padding: 0;
@@ -105,35 +106,7 @@ body {
     }
 
     //Descricao tarefa aberta
-    .main_desc{
-      .desc_tarefas{
-        border-top: 1px solid #5e5c5c;
-        display: flex;
-        justify-content:space-around;
-      }
 
-      div{
-        flex-basis: 48%;
-        span{
-          color: $text-color2;
-          font-size: 0.734em;
-        }
-
-        textarea{
-          background: $bg-color-secondary;
-          width: 100%;
-          font-size: 0.734em;
-          color:$text-color2 ;
-        }
-        select{
-          width: 100%;
-          background: $bg-color-secondary;
-          color: $text-color2;
-          font-size: 0.734em;
-        }
-
-      }
-    }
   }
 
   .relevancia-importante {
