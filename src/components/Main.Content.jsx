@@ -16,12 +16,12 @@ const MainComponent = () => {
 
      
     const [listaTarefas, setListaTarefas] = useState([])
-
+    const [auteracaoTarefas, setAuteracaoTarefas] = useState(false)
     const controle = new ControleTarefas() 
     
     useEffect(()=>{
         setListaTarefas(controle.obterTarefas())
-    },[])
+    },auteracaoTarefas)
 
     // Fechar a edição (não está salvando alterações ainda)
     const salvar = (id, relevancia, title) => {
@@ -29,10 +29,16 @@ const MainComponent = () => {
         setListaTarefas(tarefasEditadas)
         setItemContent('')
     }
+    
+    const incluirTarefa=(inputValue)=>{
+        console.log('incluir tarefa',inputValue)
+        controle.incluir(inputValue)
+        setAuteracaoTarefas(!auteracaoTarefas)
+    }
 
     return (
             <div className='main_todo w-9/12 mt-5'>
-                <InputNovaTarefa/>
+                <InputNovaTarefa incluirTarefa={incluirTarefa}/>
                 {listaTarefas.map((tarefa)=> (
                     <Tarefas 
                     id={tarefa.id} 
