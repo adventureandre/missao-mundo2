@@ -25,12 +25,8 @@ const MainComponent = () => {
 
     // Fechar a edição (não está salvando alterações ainda)
     const salvar = (id, relevancia, title) => {
-        //let tarefaEditada = {'id': id, 'relevancia':relevancia, 'title':title}
-        //let novaListaTarefas = listaTarefas.filter((tarefa)=> tarefa.id !== id )
-        //novaListaTarefas.push(tarefaEditada)
-        //console.log(novaListaTarefas)
-        //setListaTarefas(novaListaTarefas)
-       //console.log(listaTarefas)
+       const tarefasEditadas=controle.editar(id, relevancia, title)
+        setListaTarefas(tarefasEditadas)
         setItemContent('')
     }
 

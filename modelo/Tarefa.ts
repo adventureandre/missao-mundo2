@@ -1,10 +1,10 @@
 export class Tarefa {
     
-    private _id: string;
-    private _relevancia: string;
-    private _title: string; 
+    private _id?: string;
+    private _relevancia?: string;
+    private _title?: string; 
     
-    constructor(id: string,relevancia:string, title: string) {
+    constructor(id?: string,relevancia?:string, title?: string) {
         
         this._id = id;
         this._relevancia=relevancia;

@@ -25,9 +25,11 @@ export default class ControleTarefas {
   }
  
 
-  public editar(): void {
-      
-  
+  public editar(id:string, relevancia:string, title:string)  {
+    let tarefaEditada = {'id': id, 'relevancia':relevancia, 'title':title}
+    const novaListaTarefas = Tarefas.filter((tarefa)=> tarefa.id !== id )
+    novaListaTarefas.push(tarefaEditada)
+    return novaListaTarefas 
   }
 
   public excluir(): void {
