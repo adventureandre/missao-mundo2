@@ -14,15 +14,16 @@ const InputNovaTarefa = (props) => {
   };
 
   return (
-    <div className='row w-100 mb-3'>
-      <FaPlus className='col-2 mt-2 icon' onClick={handleIncluirTarefa} />
+    <div className="flex flex-row w-full mb-3">
+      
       <input
-        className='col-10'
-        type='text'
+        className="text-black flex-grow ml-2 px-4 py-2 rounded-md mb-8"
+        type="text"
         placeholder="Nova tarefa..."
         value={inputValue}
         onChange={handleInputChange}
       />
+      <FaPlus className="w-8 h-8 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500" onClick={handleIncluirTarefa} />
     </div>
   );
 };

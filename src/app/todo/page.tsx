@@ -1,10 +1,10 @@
 import MainComponent from "@/components/Main.Content";
-import '@/styles/style.scss';
+// import '@/styles/style.scss';
 import Image from 'next/image';
 
 export default function Todo() {
   return (
-    <section className="bg-emerald-400 h-screen">
+    <section className="custom_bg h-screen flex flex-col items-center pt-3">
       <Image
         src="/Tasks.svg"
         width={100}
@@ -16,4 +16,5 @@ export default function Todo() {
     </section>
   );
 }
+
 

@@ -1,42 +1,60 @@
-import React, {useState} from "react";
-import {FcMenu} from "react-icons/fc";
-import {GoTrashcan} from "react-icons/go";
-import {FiEdit} from "react-icons/fi";
-import {BsCheckSquare} from "react-icons/bs";
+import React, { useState } from "react";
+import { GoTrashcan } from "react-icons/go";
+import { FiEdit } from "react-icons/fi";
+import { BsCheckSquare } from "react-icons/bs";
 import TarefasOpen from "@/components/TarefasOpen";
 
 const Tarefas = (props) => {
+  const [itemContent, setItemContent] = useState(null);
+  const [isChecked, setIsChecked] = useState(false);
 
-    const [itemContent, setItemContent] = useState('')
-
-    // Abrir a tarefa para edição
-    const editTask = (id) => {
-        if(id){
-            setItemContent(<TarefasOpen/>)
-        }
+  const editTask = (id) => {
+    if (id) {
+      setItemContent(<TarefasOpen />);
     }
+  };
 
-    return (
-        <div className={`relevancia-${props.relevancia} row flex items-center flex-wrap w-full mb-3`} key={props.id}>
-            <div className='flex items-center flex-wrap w-full'>
-                <FcMenu className="w-1/12 mt-2 icon"/>
-                <div className="custom-checkbok w-1/12">
-                    <input id={`realizardo-${props.id}`} className="ckeck" type="checkbox"/>
-                    <label htmlFor={`realizardo-${props.id}`}></label>
-                </div>
-                <input className="w-9/12" type="text" value={props.title} placeholder="Nova tarefa..."/>
-                <div className="w-1/12 flex justify-end">
-                    <GoTrashcan className="mt-2 icon icon-red"/>
-                    <FiEdit
-                        className="mt-2 icon icon-yellow"
-                        onClick={() => editTask(props.id)}
-                    />
-                    <BsCheckSquare className="mt-2 icon icon-green"/>
-                </div>
-            </div>
-            {itemContent}
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
+
+  const relevanciaClasses =
+  props.relevancia === "importante"
+    ? "border-l-4 border-yellow-400 border-solid rounded-lg"
+    : props.relevancia === "urgente"
+    ? "border-l-4 border-red-500 border-solid rounded-lg"
+    : "";
+
+
+  return (
+    <div
+      className={`flex flex-wrap items-center justify-center w-full mb-3 ${relevanciaClasses} ${
+        isChecked ? "bg-gray-200" : ""
+      }`}
+      key={props.id}
+    >
+      <div className="flex flex-wrap items-center w-full bg-white shadow-md p-2 rounded-md">
+        <input
+          className="w-9/12 bg-white text-gray-700 py-1 px-2 ml-5 rounded-md"
+          type="text"
+          value={props.title}
+          placeholder="Nova tarefa..."
+        />
+
+        <div className="w-1/12 flex justify-end">
+          <div className="flex items-center space-x-2">
+            <GoTrashcan className="mt-2 text-red-500 text-2xl" />
+            <FiEdit
+              className="mt-2 text-yellow-500 text-2xl"
+              onClick={() => editTask(props.id)}
+            />
+            <BsCheckSquare className="mt-2 text-green-500 text-2xl" />
+          </div>
         </div>
-    );
-}
+      </div>
+      {itemContent}
+    </div>
+  );
+};
 
 export default Tarefas;
