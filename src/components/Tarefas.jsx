@@ -7,13 +7,16 @@ import TarefasOpen from "@/components/TarefasOpen";
 const Tarefas = ({tarefa,salvar,excluir,onToggle}) => {
   const [itemContent, setItemContent] = useState(null);
 
+  //OBS olhar se vai precisar dessa State
+  // as mudancas de checke ja esta sendo feita direto no iten do objeto
+  const [isChecked, setIsChecked] = useState(false);
+
   const editTask = (id) => {
     if (id) {
       setItemContent(<TarefasOpen />);
     }
   };
 
-  // olhar se vai precisar dessa funcao
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   };
