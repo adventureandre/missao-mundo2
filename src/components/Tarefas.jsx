@@ -4,7 +4,7 @@ import { FiEdit } from "react-icons/fi";
 import { BsCheckSquare } from "react-icons/bs";
 import TarefasOpen from "@/components/TarefasOpen";
 
-const Tarefas = (props) => {
+const Tarefas = ({tarefa,salvar,excluir,onToggle}) => {
   const [itemContent, setItemContent] = useState(null);
   const [isChecked, setIsChecked] = useState(false);
 
@@ -19,9 +19,9 @@ const Tarefas = (props) => {
   };
 
   const relevanciaClasses =
-  props.relevancia === "importante"
+  tarefa.relevancia === "importante"
     ? "border-l-4 border-yellow-400 border-solid rounded-lg"
-    : props.relevancia === "urgente"
+    : tarefa.relevancia === "urgente"
     ? "border-l-4 border-red-500 border-solid rounded-lg"
     : "";
 
@@ -31,13 +31,13 @@ const Tarefas = (props) => {
       className={`flex flex-wrap items-center justify-center w-full mb-3 ${relevanciaClasses} ${
         isChecked ? "bg-gray-200" : ""
       }`}
-      key={props.id}
+      key={tarefa.id}
     >
       <div className="flex flex-wrap items-center w-full bg-white shadow-md p-2 rounded-md">
         <input
-          className="w-9/12 bg-white text-gray-700 py-1 px-2 ml-5 rounded-md"
+          className={["w-9/12 bg-white text-gray-700 py-1 px-2 ml-5 rounded-md",tarefa.checked ? 'checked' : ''].join(' ')}
           type="text"
-          value={props.title}
+          value={tarefa.title}
           placeholder="Nova tarefa..."
         />
 
@@ -46,9 +46,9 @@ const Tarefas = (props) => {
             <GoTrashcan className="mt-2 text-red-500 text-2xl" />
             <FiEdit
               className="mt-2 text-yellow-500 text-2xl"
-              onClick={() => editTask(props.id)}
+              onClick={() => editTask(tarefa.id)}
             />
-            <BsCheckSquare className="mt-2 text-green-500 text-2xl" />
+            <BsCheckSquare onClick={() => onToggle(tarefa)} className="mt-2 text-green-500 text-2xl" />
           </div>
         </div>
       </div>
