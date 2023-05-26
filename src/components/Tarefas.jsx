@@ -37,12 +37,9 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
             key={tarefa.id}
         >
             <div className="flex flex-wrap items-center w-full bg-white shadow-md p-2 rounded-md">
-                <input
+                <div
                     className={["w-9/12 bg-white text-gray-700 py-1 px-2 ml-5 rounded-md", tarefa.checked ? 'checked' : ''].join(' ')}
-                    type="text"
-                    value={tarefa.title}
-                    placeholder="Nova tarefa..."
-                />
+                    >{tarefa.title}</div>
 
                 <div className="w-1/12 flex justify-end">
                     <div className="flex items-center space-x-2">
