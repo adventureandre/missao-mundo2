@@ -1,5 +1,5 @@
 import { Tarefa } from "../modelo/Tarefa";
- 
+
 const Tarefas  =[
     {id:1, relevancia:'importante', title:"Tarefas da Estacio!", checked: false},
     {id:2, relevancia:'urgente', title:'Tarefas do dia dia!', checked: false},
@@ -10,7 +10,7 @@ interface propsTarefa{
    id :  number;
    relevancia : string;
    title : string;
-   checked: false;
+   checked: boolean;
 }
 
 export default class ControleTarefas {
