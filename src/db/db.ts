@@ -1,14 +1,18 @@
 import mongoose from 'mongoose';
 
-
+import {URL_SELECIONADA} from '../../setDB'
+  
 const DB=process.env.DB
 const USER=process.env.USER
 const PWD=process.env.PWD
+
+const PORT=process.env.PORT
+
+
+ var  URL=URL_SELECIONADA
  
 
-const URL_USER =`mongodb://${USER}:${PWD}@127.0.0.1:27017/${DB}?authSource=admin`
 
-const URL=URL_USER
 const connectDB = async () => {
   try {
     await mongoose.connect( URL, {
