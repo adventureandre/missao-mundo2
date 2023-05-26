@@ -6,7 +6,6 @@ import TarefasOpen from "@/components/TarefasOpen";
 
 const Tarefas = ({tarefa,salvar,excluir,onToggle}) => {
   const [itemContent, setItemContent] = useState(null);
-  const [isChecked, setIsChecked] = useState(false);
 
   const editTask = (id) => {
     if (id) {
@@ -14,6 +13,7 @@ const Tarefas = ({tarefa,salvar,excluir,onToggle}) => {
     }
   };
 
+  // olhar se vai precisar dessa funcao
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   };
