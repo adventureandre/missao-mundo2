@@ -12,12 +12,13 @@ enum TipoConexao {
   ATLAS_MONGO_COM_AUTENTICACAO = "3",
 }
 
+// AKI PARA ATIVAR CONEXAO USE true
+const ATIVE_DB = false;
+
+
 // AKI  configure seu tipo de conexão AKI
 const TIPO_CONEXAO = "2";
-
-// AKI Ativar conexão use true
-const ATIVE_DB = true;
-
+ 
 const DB = process.env.DB;
 const USER = process.env.USER;
 const PWD = process.env.PWD;
