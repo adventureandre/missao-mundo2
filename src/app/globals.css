@@ -7,8 +7,3 @@
 .custom_bg {
   background: linear-gradient(0deg, #6BD1B3 0%, #05a374 100%);
 }
-
-.checked{
-  color: #b2bec3;
-  text-decoration: line-through;
-}
