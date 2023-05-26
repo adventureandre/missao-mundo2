@@ -43,7 +43,11 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
 
                 <div className="w-1/12 flex justify-end">
                     <div className="flex items-center space-x-2">
-                        <GoTrashcan className="mt-2 text-red-500 text-2xl"/>
+                        <GoTrashcan 
+                        className="mt-2 text-red-500 text-2xl"
+                        onClick={() => excluir(tarefa.id)}
+                        />
+                        
                         <FiEdit
                             className="mt-2 text-yellow-500 text-2xl"
                             onClick={() => editTask(tarefa.id)}
