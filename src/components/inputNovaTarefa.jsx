@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 
-const InputNovaTarefa = (props) => {
+const InputNovaTarefa = ({incluirTarefa}) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
@@ -9,7 +9,7 @@ const InputNovaTarefa = (props) => {
   };
 
   const handleIncluirTarefa = () => {
-    props.incluirTarefa(inputValue);
+    incluirTarefa(inputValue);
     setInputValue(""); // Limpa o valor do input após a inclusão da tarefa
   };
 
