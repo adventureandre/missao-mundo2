@@ -14,7 +14,7 @@ PACKAGE.JSON em scripts
 */
 
 // AKI PARA ATIVAR CONEXAO USE true
-const ATIVE_DB = true;
+const ATIVE_DB = false;
  
 // conexão tipo :
 
