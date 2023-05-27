@@ -35,4 +35,4 @@ Siga as etapas abaixo para configurar o ambiente:
 
 1. Clone este repositório:
    ```shell
-   git clone https://github.com/seu-usuario/projeto-xyz.git
+   git clone https://github.com/adventureandre/missao-mundo2
