@@ -9,14 +9,12 @@ DevTeam 2
    
    #Porta do app
    
-    A porta da aplicação esta configurada no arquivo
-    PACKAGE.JSON em scripts
-
+    A porta da aplicação esta configurada para 3005 no arquivo PACKAGE.JSON em scripts
 
 
    #Persistência dos dados
 
-   O projeto foi desenvolvido para persistir seus dados tanto para localstorage como para um banco MongoDb estando local ou no Mongo Atlas Databse, para isso basta configurar as informações pertinentes ao banco em .env.local e ativar a opção ATIVE_DB= true em setDB.ts
+   O projeto foi desenvolvido para persistir seus dados tanto para localstorage (modo default) assim como para o banco MongoDb estando local ou no Mongo Atlas Databse, para isso basta configurar as informações pertinentes ao banco em .env.local e ativar a opção ATIVE_DB= true em setDB.ts
 
     
 ### Pré-requisitos
