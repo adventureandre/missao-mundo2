@@ -7,13 +7,13 @@ DevTeam 2
 
 ## Configuração do Ambiente
    
-   A porta do app
+   #Porta do app
     A porta da aplicação esta configurada no arquivo
     PACKAGE.JSON em scripts
 
 
 
-   A persistência dos dados
+   #Persistência dos dados
 
    O projeto foi desenvolvido para persistir seus dados tanto para localstorage como para um banco MongoDb estando local ou no Mongo Atlas Databse, para isso basta configurar as informações pertinentes ao banco em .env.local e ativar a opção ATIVE_DB= true em setDB.ts
 
