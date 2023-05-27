@@ -1,31 +1,59 @@
-import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import React, {useRef, useState} from "react";
+import {FaPlus} from "react-icons/fa";
 
 const InputNovaTarefa = ({incluirTarefa}) => {
-  const [inputValue, setInputValue] = useState("");
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+    //Numero das teclas Entre e Esc
+    const ESCAPE_KEY = 27;
+    const ENTER_KEY = 13;
 
-  const handleIncluirTarefa = () => {
-    incluirTarefa(inputValue);
-    setInputValue(""); // Limpa o valor do input após a inclusão da tarefa
-  };
+    const [inputValue, setInputValue] = useState("");
 
-  return (
-    <div className="flex flex-row w-full mb-3">
-      
-      <input
-        className="text-black flex-grow ml-2 px-4 py-2 rounded-md mb-8"
-        type="text"
-        placeholder="Nova tarefa..."
-        value={inputValue}
-        onChange={handleInputChange}
-      />
-      <FaPlus className="w-8 h-8 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500" onClick={handleIncluirTarefa} />
-    </div>
-  );
+    //Focus no input
+    const inputRef = useRef(null)
+
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    };
+
+    //limpar formulario
+    const erase = () => {
+        setInputValue(""); // Limpa o valor do input após a inclusão da tarefa
+    }
+
+    const handleIncluirTarefa = () => {
+        if (inputValue) {
+            incluirTarefa(inputValue)
+            erase();
+        }
+        inputRef.current.focus();
+    };
+
+    //Funcao que envia formulario pelo teclado
+    const onKeyDown = (event) => {
+        if (event.which === ENTER_KEY) {
+            handleIncluirTarefa()
+        } else if (event.which === ESCAPE_KEY) {
+            erase();
+        }
+    }
+
+    return (
+        <div className="flex flex-row w-full mb-3">
+
+            <input
+                className="text-black flex-grow ml-2 px-4 py-2 rounded-md mb-8"
+                type="text"
+                placeholder="Nova tarefa..."
+                value={inputValue}
+                onChange={handleInputChange}
+                ref={inputRef}
+                onKeyDown={onKeyDown}
+            />
+            <FaPlus className="w-8 h-8 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500"
+                    onClick={handleIncluirTarefa}/>
+        </div>
+    );
 };
 
 export default InputNovaTarefa;
