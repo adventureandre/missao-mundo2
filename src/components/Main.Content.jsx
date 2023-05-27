@@ -7,8 +7,11 @@ import TarefasOpen from "./TarefasOpen";
 import ControleTarefas from "../controle/ControleTarefas";
 import tarefas from "./Tarefas";
 
+import { ATIVE_DB } from "../../setDB";
+
 const MainComponent = () => {
   const [listaTarefas, setListaTarefas] = useState([]);
+  const [tarefasTemp, setTarefasTemp] = useState([]);
   const [alteracaoTarefas, setAlteracaoTarefas] = useState(false);
   const controle = new ControleTarefas();
 
@@ -16,16 +19,30 @@ const MainComponent = () => {
   // mudar o chaveamento para o mongoBD atravé de
   // setDB.ts e .env.local
 
+  // Precisei adaptar o id do banco p/ o id padrão do projeto
+  // por isso o uso do ATIVE_DB
+
   const fetchData = async () => {
     const aData = await controle.obterTarefas();
-    console.log("Carregando DB form " + new Date().toLocaleString(), aData);
-    setListaTarefas(aData);
+    
+    if (ATIVE_DB) {
+      const aData2 = aData.map(({ _id, title, relevance, completed }) => ({
+        id: _id,
+        title,
+        relevance,
+        completed,
+      }));
+      setListaTarefas(aData2);
+    } else {
+      setListaTarefas(aData);
+    }
   };
 
   useEffect(() => {
     fetchData();
   }, [alteracaoTarefas]);
 
+  console.log("listaTarefas ==>> ", listaTarefas);
   const salvar = (id, relevancia, title, checked) => {
     const tarefa = {
       id: id,

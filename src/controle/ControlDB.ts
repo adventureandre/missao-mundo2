@@ -1,34 +1,39 @@
 import ControleTarefasDb from "./ControleDbTarefas";
+import { Tarefa } from "../modelo/Tarefa";
 
 import { ITask } from "@/db/Tarefas";
- 
- 
 
-export default class ControlDb  {
-    
-    control: object;
+interface IControleTarefas {
+  obterTarefas(): Promise<Tarefa[]>;
+  incluir(tarefa: Tarefa): void;
+  editar(tarefa: Tarefa): void;
+  excluir(id: string): void;
+}
 
-    constructor(){
-        this.control= new ControleTarefasDb()
-    }
+export default class ControlDb {
+  control: IControleTarefas;
 
-    public async obterTarefas() {
-        const response= await this.control.obterTarefas()
-        const data =response.data ; 
-        console.log("dentro de obterTarefas data",data)
-        return data;
-      }
+  constructor() {
+    this.control = new ControleTarefasDb();
+  }
 
-      public incluir(tarefa: ITask){
-        this.control.incluir(tarefa)
-      }
-    
-      public editar(tarefa: ITask){
-        this.control.editar(tarefa)
-      }   
+  public async obterTarefas() {
+    const response = await this.control.obterTarefas();
+    const data = response.data; //vscode não reconhece mas funciona e não gera erro 
+    return data;
+  }
 
-  public excluir(id:number){
-    const _id =id.toString
-    this.control.excluir(_id)
-  }    
+  public incluir(tarefa: Tarefa) {
+    this.control.incluir(tarefa);
+  }
+
+  public editar(tarefa: Tarefa) {
+    this.control.editar(tarefa);
+  }
+
+  public excluir(id: number) {
+    console.log('excluir dentro de ControlDB')
+    const _id: string = id.toString();
+    this.control.excluir(_id);
+  }
 }

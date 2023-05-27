@@ -1,10 +1,31 @@
+
+/*
+
+-----------
+IMPORTANTE
+-----------
+A porta da aplicação esta configurada no arquivo
+PACKAGE.JSON em scripts
+
+ "scripts": {
+    "dev": "next dev --port=3005",
+
+
+*/
+
+// AKI PARA ATIVAR CONEXAO USE true
+const ATIVE_DB = true;
+ 
 // conexão tipo :
 
 // 1 mongoDB sem necessidade de autenticação
 // 2 mongoDB com necessidade de autenticação
 // 3 mongoDB ATLAS (obrigatório usuario e senha)
 
-// completar config em .env.local
+// completar config (usuario/senha e porta) em .env.local
+
+// AKI  configure seu tipo de conexão AKI
+const TIPO_CONEXAO = "2";
 
 enum TipoConexao {
   LOCALHOST_SEM_AUTENTICACAO = "1",
@@ -12,13 +33,6 @@ enum TipoConexao {
   ATLAS_MONGO_COM_AUTENTICACAO = "3",
 }
 
-// AKI PARA ATIVAR CONEXAO USE true
-const ATIVE_DB = false;
-
-
-// AKI  configure seu tipo de conexão AKI
-const TIPO_CONEXAO = "2";
- 
 const DB = process.env.DB;
 const USER = process.env.USER;
 const PWD = process.env.PWD;
