@@ -8,6 +8,7 @@ DevTeam 2
 ## Configuração do Ambiente
    
    #Porta do app
+   
     A porta da aplicação esta configurada no arquivo
     PACKAGE.JSON em scripts
 
