@@ -31,6 +31,7 @@ enum TipoConexao {
   LOCALHOST_SEM_AUTENTICACAO = "1",
   LOCALHOST_COM_AUTENTICACAO = "2",
   ATLAS_MONGO_COM_AUTENTICACAO = "3",
+  MONGO_EXTERNO="4",
 }
 
 const DB = process.env.DB;
@@ -39,7 +40,7 @@ const PWD = process.env.PWD;
 
 const PORT = process.env.PORT;
 
-const DEF_CONEXAO: TipoConexao = process.env.TIPO_CONEXAO as TipoConexao;
+const DEF_CONEXAO: TipoConexao = TIPO_CONEXAO as TipoConexao;
 
 var URL_SELECIONADA=''
 
@@ -49,6 +50,9 @@ const URL_ATLAS = `mongodb+srv://${USER}:${PWD}@clustersp.gdup60c.mongodb.net/?r
 
 const URL_MONGO_USER = `mongodb://${USER}:${PWD}@127.0.0.1:${PORT}/${DB}?authSource=admin`;
 
+//inclusao de uma conexão para outra maq na rede de casa
+const URL_MONGO_EXTERNO= `mongodb://192.168.0.10:${PORT}`;
+ 
 switch (DEF_CONEXAO) {
   case TipoConexao.LOCALHOST_SEM_AUTENTICACAO:
     console.log("conexão sem autenticação localhost");
@@ -62,9 +66,16 @@ switch (DEF_CONEXAO) {
     console.log("conexão sem autenticação atlas mongoDb");
     URL_SELECIONADA = URL_ATLAS;
     break;
-  default:
+  case TipoConexao.MONGO_EXTERNO:
+    console.log("conexão sem autenticação outra maquina da rede");
+    URL_SELECIONADA = URL_MONGO_EXTERNO;
+    break;
+   
+   
+    default:
     URL_SELECIONADA = URL_MONGO_USER;
 }
 
+console.log('URL_SELECIONADA',URL_SELECIONADA)
  
 export { ATIVE_DB, URL_SELECIONADA  };
