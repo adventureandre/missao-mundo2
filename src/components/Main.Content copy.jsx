@@ -23,17 +23,20 @@ const MainComponent = () => {
   // por isso o uso do ATIVE_DB
 
   const fetchData = async () => {
+    
     let aData = await controle.obterTarefas();
-
+    
     if (ATIVE_DB) {
-      aData = aData.map(({ _id, title, relevance, completed }) => ({
+        aData = aData.map(({ _id, title, relevance, completed }) => ({
         id: _id,
         title,
         relevance,
         completed,
       }));
+      setListaTarefas(aData?aData:[]);
+    } else {
+      setListaTarefas(aData);
     }
-    setListaTarefas(aData ? aData : []);
   };
 
   useEffect(() => {
