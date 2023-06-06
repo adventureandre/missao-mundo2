@@ -86,7 +86,7 @@ const MainComponent = () => {
           key={tarefa.id}
           tarefa={tarefa}
           salvar={salvar}
-          excluir={excluirTarefa}z
+          excluir={excluirTarefa}
           onToggle={onToggle}
         />
       ))}

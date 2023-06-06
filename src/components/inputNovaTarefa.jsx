@@ -3,7 +3,7 @@ import {FaPlus} from "react-icons/fa";
 
 const InputNovaTarefa = ({incluirTarefa}) => {
 
-    //Numero das teclas Entre e Esc
+    //Numero das teclas Enter e Esc
     const ESCAPE_KEY = 27;
     const ENTER_KEY = 13;
 
@@ -42,15 +42,15 @@ const InputNovaTarefa = ({incluirTarefa}) => {
         <div className="flex flex-row w-full mb-3">
 
             <input
-                className="text-black flex-grow ml-2 px-4 py-2 rounded-md mb-8"
+                className="text-black flex-grow ml-0 px-4 py-3 rounded-md mb-1"
                 type="text"
-                placeholder="Nova tarefa..."
+                placeholder="Digite aqui"
                 value={inputValue}
                 onChange={handleInputChange}
                 ref={inputRef}
                 onKeyDown={onKeyDown}
             />
-            <FaPlus className="w-8 h-8 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500"
+            <FaPlus className="w-8 h-10 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500"
                     onClick={handleIncluirTarefa}/>
         </div>
     );
