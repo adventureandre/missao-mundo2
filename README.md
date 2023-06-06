@@ -24,15 +24,50 @@
 * [EMERSON GREGORIO ALVES](https://github.com/Gregdev22) - MATRICULA: 2022.0908.4986
 * [NELSON CARVALHO DE LIMA JUNIOR](https://github.com/MamboDark) - MATRICULA: 2022.0835.3568
 
-
- <h1 align="center"> APLICAÇÃO </h1>
+ <h1 align="center"> ⚙️Descrição da Missão  </h1>
  <hr>
 
 
+<h3>Seu desafio será criar uma aplicação web de lista de afazeres (“to-do list”). Os requisitos que a aplicação deve ter, são: </h3>
 
+* Incluir título na aba do navegador, para que o usuário encontre a sua aplicação no meio das várias abas que constantemente mantém abertas; 
 
-## Descrição
-[Descrição do projeto]
+* Incluir um cabeçalho dentro da página, para que o usuário saiba facilmente em que página se encontra e do que se trata o conteúdo; 
+
+* Inserir um ícone na aba do navegador; 
+
+* Disponibilizar um campo de texto para digitar o nome de uma nova atividade a ser adicionada à lista; 
+
+* Disponibilizar um botão para adicionar uma nova atividade à lista; 
+
+* Disponibilizar uma lista contendo as atividades já inseridas; 
+
+* Cada linha da lista deve conter:  
+
+    - o texto que o usuário digitou ao cadastrar a atividade; 
+    - checkbox ou botão para o usuário marcar que a atividade já foi realizada;  
+    - um botão para excluir a atividade da lista caso desejado. 
+
+* Quando o usuário marcar uma tarefa como realizada, o texto daquela linha deve ser tachado (line-through); 
+* Disponibilizar um README documentando racional, e qualquer coisa que queira documentar sobre o sistema e principalmente como iniciá-lo. 
+
+ <h1 align="center"> 🌟 Bônus da Missão Certificação (Não obrigatórios)  </h1>
+ <hr>
+
+* A lista deve ser salva no "localStorage" do navegador (incluindo quais itens já foram realizados), e deve ser carregada sempre que a página for reaberta. 
+
+* Categorizar os itens da lista. 
+
+* Ser possível reordenar os itens da lista. 
+
+* Guardar os dados em um banco de dados. 
+
+* Incluir/remover anexo as tarefas. 
+
+* Disponibilizar um Dockerfile ou compose com instruções de como iniciar o sistema. 
+
+ <h1 align="center"> ⚒ APLICAÇÃO ⚒ </h1>
+ <hr>
 
 ## Configuração do Ambiente
    
