@@ -1,6 +1,35 @@
-# Missão Certificação Nv2.
+<!-- PROJECT LOGO -->
+<div align="center">
+   <a href="https://github.com/othneildrew/Best-README-Template">
+      <img src="https://github.com/Dev-Team-04/Sistema-de-Gerenciamento-de-Ferramentas/blob/versao_final/estacio_sem_nome.ico" alt="estacio logo" width="80"                  height="80">
+   </a>
+    <h1 align="center">FACULDADE ESTÁCIO</h1>
+     <hr>
+</div> 
 
-DevTeam 2
+* DESENVOLVIMENTO FULL STACK
+* PROJETO INTEGRADOR - MUNDO 02
+* DISCIPLINA: Projeto Front-End om Framework e CRUD
+* MISSÃO CERTIFICAÇÃO – PROGRAMADOR FRONT-END
+
+<hr>
+
+ <h1 align="center"> DEV TEAM 02 </h1>
+ <hr>
+
+* [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
+* [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
+* [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
+* [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
+* [EMERSON GREGORIO ALVES](https://github.com/Gregdev22) - MATRICULA: 2022.0908.4986
+* [NELSON CARVALHO DE LIMA JUNIOR](https://github.com/MamboDark) - MATRICULA: 2022.0835.3568
+
+
+ <h1 align="center"> APLICAÇÃO </h1>
+ <hr>
+
+
+
 
 ## Descrição
 [Descrição do projeto]
