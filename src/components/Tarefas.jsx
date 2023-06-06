@@ -3,6 +3,7 @@ import {GoTrashcan} from "react-icons/go";
 import {FiEdit} from "react-icons/fi";
 import {BsCheckSquare} from "react-icons/bs";
 import TarefasOpen from "@/components/TarefasOpen";
+import {toast} from "react-toastify";
 
 const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
     const [itemContent, setItemContent] = useState(null);
@@ -16,6 +17,8 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
             setItemContent(<TarefasOpen/>);
         }
     };
+
+    const notify = (text) => toast.error(`Tarefa: "${text}" Excluida!`);
 
     const handleCheckboxChange = (e) => {
         setIsChecked(e.target.checked);
@@ -45,7 +48,10 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
                     <div className="flex items-center space-x-2">
                         <GoTrashcan 
                         className="mt-2 text-red-500 text-2xl"
-                        onClick={() => excluir(tarefa.id)}
+                        onClick={() => {
+                            notify(tarefa.title);
+                            excluir(tarefa.id);
+                        }}
                         />
                         
                         <FiEdit

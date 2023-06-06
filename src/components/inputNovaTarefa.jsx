@@ -1,4 +1,9 @@
 import React, {useRef, useState} from "react";
+//REACT-TOASTIFY
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+//REACT-ICONS
 import {FaPlus} from "react-icons/fa";
 
 const InputNovaTarefa = ({incluirTarefa}) => {
@@ -6,6 +11,7 @@ const InputNovaTarefa = ({incluirTarefa}) => {
     //Numero das teclas Enter e Esc
     const ESCAPE_KEY = 27;
     const ENTER_KEY = 13;
+    const notify = (text) => toast.success(`Tarefa: "${text}" adicionada!`);
 
     const [inputValue, setInputValue] = useState("");
 
@@ -24,6 +30,7 @@ const InputNovaTarefa = ({incluirTarefa}) => {
     const handleIncluirTarefa = () => {
         if (inputValue) {
             incluirTarefa(inputValue)
+            notify(inputValue);
             erase();
         }
         inputRef.current.focus();

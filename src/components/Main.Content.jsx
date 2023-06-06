@@ -8,6 +8,7 @@ import ControleTarefas from "../controle/ControleTarefas";
 import tarefas from "./Tarefas";
 
 import { ATIVE_DB } from "../../setDB";
+import {ToastContainer} from "react-toastify";
 
 const MainComponent = () => {
   const [listaTarefas, setListaTarefas] = useState([]);
@@ -90,6 +91,7 @@ const MainComponent = () => {
           onToggle={onToggle}
         />
       ))}
+      <ToastContainer />
     </div>
   );
 };
