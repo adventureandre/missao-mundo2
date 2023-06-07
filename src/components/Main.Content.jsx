@@ -47,9 +47,9 @@ const MainComponent = () => {
       id: id,
       relevance: relevancia,
       title: title,
-      completed: completo,
+      completed: checked,
     };
-    const tarefasEditadas = controle.editar(id, relevancia, title, checked);
+    controle.editar(id, relevancia, title, checked);
     setAlteracaoTarefas(!alteracaoTarefas);
   };
 
@@ -59,6 +59,8 @@ const MainComponent = () => {
     //fetchData()
     setAlteracaoTarefas(!alteracaoTarefas);
   };
+   
+   
 
   const incluirTarefa = (inputValue) => {
     const tarefa = {

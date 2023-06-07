@@ -14,7 +14,7 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
 
     const editTask = (id) => {
         if (id) {
-            setItemContent(<TarefasOpen/>);
+            setItemContent(<TarefasOpen props={tarefa}/>);
         }
     };
 

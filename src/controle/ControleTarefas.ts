@@ -29,8 +29,7 @@ Por isso apelei para o arquivo setDB na raiz
 */
 
 
-
-import { Tarefa } from "../modelo/Tarefa";
+ 
 import { ATIVE_DB } from "../../setDB";
 import ControlArray from "./ControlArray";
 import ControlDb from "./ControlDB";
