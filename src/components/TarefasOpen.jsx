@@ -28,6 +28,7 @@ const TarefasOpen = (props) => {
 
   const CancelClick = () =>{
     setIsConfirmed(true);
+    window.location.reload();//--->>> Dá um "F5" na página.
   }
 
   if (isConfirmed) {
