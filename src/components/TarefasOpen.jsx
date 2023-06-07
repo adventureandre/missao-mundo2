@@ -23,6 +23,7 @@ const TarefasOpen = (props) => {
     console.log('confirmação da edição ==>> ',tarefa)
     controle.editar(tarefa)
     setIsConfirmed(true);
+    window.location.reload();//--->>> Dá um "F5" na página.
   };
 
   const CancelClick = () =>{
