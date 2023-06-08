@@ -80,7 +80,7 @@ const MainComponent = () => {
   };
 
   return (
-    <div className="container bg-[#23262c] shadow-2xl mx-auto rounded-xl w-9/12 mt-5 px-10 py-10">
+    <div className="container bg-[#23262c] drop-shadow-[0px_5px_10px_rgba(0,0,0)] mx-auto rounded-xl w-9/12 mt-5 px-10 py-10">
       <h1>Adicione sua tarefa: </h1>
       <InputNovaTarefa incluirTarefa={incluirTarefa} />
       {listaTarefas.map((tarefa) => (
