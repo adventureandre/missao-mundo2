@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Team() {
   return (
     <div className="container bg-[#23262c] drop-shadow-[0px_5px_10px_rgba(0,0,0,0.60)] mx-auto rounded-[20px] w-[600px] mt-5 px-5 py-10 ">
-      <h2 className='text-center mb-5'>||| DEVTEAM 02 ESTACIO MUNDO 2 |||</h2>
+      <h2 className='text-center mb-5'>DEVTEAM 02 ESTACIO MUNDO 2</h2>
       <div className='ml-[130px]'>
         <div className="flex items-center space-x-4 mb-4">
           <Image
