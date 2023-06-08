@@ -18,19 +18,19 @@ export default class ControleTarefasArray implements IControleTarefas {
       id: 1,
       relevance: "importante",
       title: "Tarefas da Estacio!",
-      completed: true,
+      completed: false,
     },
     {
       id: 2,
       relevance: "urgente",
       title: "Tarefas do dia dia!",
-      completed: true,
+      completed: false,
     },
     {
       id: 3,
       relevance: "urgente",
       title: "Concluir a missão M2!",
-      completed: false,
+      completed: true,
     },
   ];
 

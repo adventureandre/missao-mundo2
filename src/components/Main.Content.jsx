@@ -73,11 +73,10 @@ const MainComponent = () => {
   };
 
   const onToggle = (tarefa) => {
-    setListaTarefas(
-      listaTarefas.map((obj) =>
-        obj.id === tarefa.id ? { ...obj, checked: !tarefa.checked } : obj
-      )
-    );
+    // persistir em localStorage ou MongoDb
+    controle.editar(tarefa)
+    // forçar refresh
+    setAlteracaoTarefas(!alteracaoTarefas); 
   };
 
   return (

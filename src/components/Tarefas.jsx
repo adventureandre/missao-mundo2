@@ -21,6 +21,7 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
     const notify = (text) => toast.error(`Tarefa: "${text}" Excluida!`);
 
     const handleCheckboxChange = (e) => {
+        console.log('evento handleCheckboxChange')
         setIsChecked(e.target.checked);
     };
 
@@ -41,7 +42,7 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
         >
             <div className="flex flex-wrap items-center w-full bg-white shadow-md p-2 rounded-md">
                 <div
-                    className={["w-10/12 bg-white text-gray-700 py-1 px-2 ml-5 rounded-md", tarefa.checked ? 'line-through text-gray-300' : ''].join(' ')}
+                    className={["w-10/12 bg-white text-gray-700 py-1 px-2 ml-5 rounded-md", tarefa.completed ? 'line-through text-gray-300' : ''].join(' ')}
                     >{tarefa.title}</div>
 
                 <div className="w-1/12 flex justify-end">
@@ -57,8 +58,15 @@ const Tarefas = ({tarefa, salvar, excluir, onToggle}) => {
                         <FiEdit
                             className="mt-2 text-yellow-500 text-2xl"
                             onClick={() => editTask(tarefa.id)}
-                        />
-                        <BsCheckSquare onClick={() => onToggle(tarefa)} className="mt-2 text-green-500 text-2xl"/>
+                        /> 
+                        <BsCheckSquare onClick={() => {
+                            // marcar opção no item do array : completa ou não
+                            tarefa.completed=!tarefa.completed
+                            // marcar opção na variavel
+                            setIsChecked(!tarefa.completed)
+                            // função de persistencia em Main.Contents
+                            onToggle(tarefa)
+                            }} className="mt-2 text-green-500 text-2xl"/>
                     </div>
                 </div>
             </div>
