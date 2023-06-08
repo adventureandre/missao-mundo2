@@ -17,7 +17,7 @@
  <h1 align="center"> DEV TEAM 02 </h1>
  <hr>
 
-* [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
+* [ANDRE LUIZ FERREIRA DE SOUZA](https://github.com/adventureandre) - MATRICULA: 202208604943
 * [JEFFERSON PONTE PESSOA](https://github.com/jeffersonkako) - MATRICULA: 202208291228
 * [MARCO BAROZZI](https://github.com/msbzz) - MATRICULA: 202211381232
 * [AMANDA DUQUE KAWAUCHI](https://github.com/madukisp) - MATRICULA: 202209170254
