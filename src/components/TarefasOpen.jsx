@@ -4,7 +4,7 @@ import ControleTarefas from "../controle/ControleTarefas";
 
 const TarefasOpen = ({tarefa,editar}) => {
   const [formData, setFormData] = useState({id:tarefa.id, title: tarefa.title, relevance: tarefa.relevance,completed: tarefa.completed });
-
+  const[visivel,setVisivel] = useState('')
   const controle= new ControleTarefas() 
 
   console.log('props ==>> ',tarefa);
@@ -13,14 +13,16 @@ const TarefasOpen = ({tarefa,editar}) => {
   const ConfirmClick = () => {
     console.log('confirmação da edição ==>> ',tarefa)
     editar(formData)
+    setVisivel('hidden');
   };
+
 
   const CancelClick = () =>{
     window.location.reload();//--->>> Dá um "F5" na página.
   }
 
   return (
-    <div className="flex justify-center w-full mb-2 mt-5 border border-yellow-500">
+    <div className={`flex justify-center w-full mb-2 mt-5 border border-yellow-500 ${visivel}`}>
       <section className="w-full">
         <div className="">
           <span className="block font-medium text-white mt-2 ml-3">Editar Tarefa</span>
