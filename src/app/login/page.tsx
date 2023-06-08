@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Login() {
   return (
-    <div className="min-h-[90vh] flex items-center justify-center">
+    <div className="min-h-[90vh] flex items-center">
       <div className="max-w-md w-full mx-auto p-6 bg-[#23262c] rounded-[20px] drop-shadow-[0px_5px_10px_rgba(0,0,0,0.60)]">
         <h1 className="text-3xl text-center mb-6">Login</h1>
         <form>

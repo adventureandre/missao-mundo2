@@ -21,8 +21,8 @@
 * [JEFFERSON PONTE PESSOA](https://github.com/jeffersonkako) - MATRICULA: 202208291228
 * [MARCO BAROZZI](https://github.com/msbzz) - MATRICULA: 202211381232
 * [AMANDA DUQUE KAWAUCHI](https://github.com/madukisp) - MATRICULA: 202209170254
-* [EMERSON GREGORIO ALVES](https://github.com/Gregdev22) - MATRICULA: 2022.0908.4986
-* [NELSON CARVALHO DE LIMA JUNIOR](https://github.com/MamboDark) - MATRICULA: 2022.0835.3568
+* [EMERSON GREGORIO ALVES](https://github.com/Gregdev22) - MATRICULA: 202209084986
+* [NELSON CARVALHO DE LIMA JUNIOR](https://github.com/MamboDark) - MATRICULA: 202208353568
 
  <h1 align="center"> ⚙️Descrição da Missão  </h1>
  <hr>

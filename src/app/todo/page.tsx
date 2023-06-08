@@ -4,7 +4,7 @@ import MainComponent from "@/components/Main.Content";
 
 export default function Todo() {
   return (
-    <section className="h-screen flex flex-col items-center pt-3">
+    <section className="flex flex-col items-center pt-20">
       <MainComponent />
     </section>
   );
