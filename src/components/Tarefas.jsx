@@ -84,4 +84,5 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
   );
 };
 
+
 export default Tarefas;
