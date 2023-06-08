@@ -4,23 +4,17 @@ import { AiOutlineCheckCircle,AiOutlineCloseCircle } from "react-icons/ai";
 import ControleTarefas from "../controle/ControleTarefas";
 import { ITask } from "../modelo/iTarefa";
 
-const TarefasOpen = (props) => {
-  const [formData, setFormData] = useState({ title: props.props.title, relevance: props.props.relevance });
+const TarefasOpen = ({tarefa,editar}) => {
+  const [formData, setFormData] = useState({id:tarefa.id, title: tarefa.title, relevance: tarefa.relevance,completed: tarefa.completed });
 
   const controle= new ControleTarefas() 
 
-  console.log('props ==>> ',props);  
-  console.log('props.title ==>> ',props.props.title);
+  console.log('props ==>> ',tarefa);
+  console.log('props.title ==>> ',tarefa.title);
 
   const ConfirmClick = () => {
-    const { title, relevance } = formData;
-    const tarefa  = {
-      id:props.props.id,
-      title:title,
-      relevance:relevance
-    }
     console.log('confirmação da edição ==>> ',tarefa)
-    controle.editar(tarefa)
+    controle.editar(formData)
     window.location.reload();//--->>> Dá um "F5" na página.
   };
 
