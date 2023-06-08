@@ -3,8 +3,8 @@ import { AiOutlineCheckCircle,AiOutlineCloseCircle } from "react-icons/ai";
 import ControleTarefas from "../controle/ControleTarefas";
 
 const TarefasOpen = ({tarefa,editar}) => {
-  const [formData, setFormData] = useState({id:tarefa.id, title: tarefa.title, relevance: tarefa.relevance,completed: tarefa.completed });
-  const[visivel,setVisivel] = useState('')
+  const [formData, setFormData] = useState({...tarefa});
+  const[visivel, setVisivel] = useState('')
 
   console.log('props ==>> ',tarefa);
   console.log('props.title ==>> ',tarefa.title);
