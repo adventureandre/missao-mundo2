@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineCheckCircle,AiOutlineCloseCircle } from "react-icons/ai";
-import ControleTarefas from "../controle/ControleTarefas";
+import {toast} from "react-toastify";
 
 const TarefasOpen = ({tarefa,editar}) => {
   const [formData, setFormData] = useState({...tarefa});
@@ -9,10 +9,13 @@ const TarefasOpen = ({tarefa,editar}) => {
   console.log('props ==>> ',tarefa);
   console.log('props.title ==>> ',tarefa.title);
 
+  const notify = (text) => toast.info(`Tarefa: "${text}" Atualizada!`);
+
   const ConfirmClick = () => {
     console.log('confirmação da edição ==>> ',tarefa)
     editar(formData)
     setVisivel('hidden');
+    notify(tarefa.title);
   };
 
 
