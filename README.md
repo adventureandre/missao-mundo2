@@ -18,7 +18,7 @@
  <hr>
 
 * [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
-* [NOME](https://github.com/PERFILAQUI) - MATRICULA: 
+* [JEFFERSON PESSOA](https://github.com/jeffersonkako) - MATRICULA: 202208291228
 * [MARCO BAROZZI](https://github.com/msbzz) - MATRICULA: 202211381232
 * [AMANDA DUQUE KAWAUCHI](https://github.com/madukisp) - MATRICULA: 202209170254
 * [EMERSON GREGORIO ALVES](https://github.com/Gregdev22) - MATRICULA: 2022.0908.4986
