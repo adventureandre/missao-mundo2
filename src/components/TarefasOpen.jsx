@@ -5,7 +5,6 @@ import ControleTarefas from "../controle/ControleTarefas";
 const TarefasOpen = ({tarefa,editar}) => {
   const [formData, setFormData] = useState({id:tarefa.id, title: tarefa.title, relevance: tarefa.relevance,completed: tarefa.completed });
   const[visivel,setVisivel] = useState('')
-  const controle= new ControleTarefas() 
 
   console.log('props ==>> ',tarefa);
   console.log('props.title ==>> ',tarefa.title);
@@ -18,7 +17,7 @@ const TarefasOpen = ({tarefa,editar}) => {
 
 
   const CancelClick = () =>{
-    window.location.reload();//--->>> Dá um "F5" na página.
+    setVisivel('hidden');
   }
 
   return (
