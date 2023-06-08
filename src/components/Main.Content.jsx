@@ -2,10 +2,7 @@
 import React, { useState, useEffect } from "react";
 import InputNovaTarefa from "./inputNovaTarefa";
 import Tarefas from "./Tarefas";
-import TarefasOpen from "./TarefasOpen";
-import globals from "../app/globals.css"
 import ControleTarefas from "../controle/ControleTarefas";
-import tarefas from "./Tarefas";
 
 import { ATIVE_DB } from "../../setDB";
 import {ToastContainer} from "react-toastify";
@@ -80,7 +77,7 @@ const MainComponent = () => {
   };
 
   return (
-    <div className="container bg-[#23262c] drop-shadow-[0px_5px_10px_rgba(0,0,0)] mx-auto rounded-xl w-9/12 mt-5 px-10 py-10">
+    <div className="container bg-[#23262c] drop-shadow-[0px_5px_10px_rgba(0,0,0,0.60)] mx-auto rounded-[20px] w-9/12 mt-5 px-10 py-10">
       <h1>Adicione sua tarefa: </h1>
       <InputNovaTarefa incluirTarefa={incluirTarefa} />
       {listaTarefas.map((tarefa) => (

@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-md w-full mx-auto p-6 bg-[#23262c] rounded-lg drop-shadow-[0px_5px_10px_rgba(0,0,0)]">
+    <div className="min-h-[90vh] flex items-center justify-center">
+      <div className="max-w-md w-full mx-auto p-6 bg-[#23262c] rounded-[20px] drop-shadow-[0px_5px_10px_rgba(0,0,0,0.60)]">
         <h1 className="text-3xl text-center mb-6">Login</h1>
         <form>
           <div className="mb-4">
@@ -17,7 +17,7 @@ export default function Login() {
           </div>
           <div className="flex justify-center">
             <Link href="/todo"> 
-            <button className="bg-[#000] hover:bg-[#05a374] focus:ring-4 focus:outline-none focus:ring-[#05a374] font-medium rounded-lg text-sm px-20 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#05a374] mr-2 mb-2" type="submit">Entrar
+            <button className="bg-[#000] hover:bg-[#05a374] focus:ring-4 focus:outline-none focus:ring-[#05a374] font-medium rounded-lg text-sm px-20 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#05a374] mr-2 mb-2 mt-2" type="submit">Entrar
             </button></Link>
           </div>
           <fieldset className='border-t border-slate-50 mt-[10px]'>

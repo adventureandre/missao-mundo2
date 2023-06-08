@@ -4,7 +4,7 @@ import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 //REACT-ICONS
-import {FaPlus} from "react-icons/fa";
+import { FiPlusCircle } from "react-icons/fi";
 
 const InputNovaTarefa = ({incluirTarefa}) => {
 
@@ -46,7 +46,7 @@ const InputNovaTarefa = ({incluirTarefa}) => {
     }
 
     return (
-        <div className="flex flex-row w-full mb-3">
+        <div className="flex flex-row w-full mb-[25px]">
 
             <input
                 className="text-black flex-grow ml-0 px-4 py-3 rounded-md mb-1"
@@ -57,7 +57,7 @@ const InputNovaTarefa = ({incluirTarefa}) => {
                 ref={inputRef}
                 onKeyDown={onKeyDown}
             />
-            <FaPlus className="w-8 h-10 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500"
+            <FiPlusCircle className="w-9 h-10 mt-1 mx-2 cursor-pointer text-white hover:text-emerald-500"
                     onClick={handleIncluirTarefa}/>
         </div>
     );
