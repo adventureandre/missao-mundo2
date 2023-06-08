@@ -16,19 +16,19 @@ export default class ControleTarefasArray implements IControleTarefas {
   private tarefas: Tarefa[] = [
     {
       id: 1,
-      relevance: "importante",
+      relevance: "alta",
       title: "Tarefas da Estacio!",
       completed: false,
     },
     {
       id: 2,
-      relevance: "urgente",
+      relevance: "media",
       title: "Tarefas do dia dia!",
       completed: false,
     },
     {
       id: 3,
-      relevance: "urgente",
+      relevance: "alta",
       title: "Concluir a missão M2!",
       completed: true,
     },

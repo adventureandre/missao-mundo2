@@ -25,12 +25,12 @@ const ATIVE_DB = false;
 // completar config (usuario/senha e porta) em .env.local
 
 // AKI  configure seu tipo de conexão AKI
-const TIPO_CONEXAO = "2";
+const TIPO_CONEXAO = "3";
 
 enum TipoConexao {
   LOCALHOST_SEM_AUTENTICACAO = "1",
   LOCALHOST_COM_AUTENTICACAO = "2",
-  ATLAS_MONGO_COM_AUTENTICACAO = "3",
+  MONGO_COM_AUTENTICACAO = "3",
 }
 
 const DB = process.env.DB;
@@ -60,9 +60,9 @@ switch (DEF_CONEXAO) {
     console.log("conexão com autenticação localhost");
     URL_SELECIONADA = URL_MONGO_USER;
     break;
-  case TipoConexao.ATLAS_MONGO_COM_AUTENTICACAO:
+  case TipoConexao.MONGO_COM_AUTENTICACAO:
     console.log("conexão sem autenticação atlas mongoDb");
-    URL_SELECIONADA = URL_ATLAS;
+    URL_SELECIONADA = URL_MONGO_USER;
     break;
  
    

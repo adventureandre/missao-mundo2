@@ -37,8 +37,7 @@ const MainComponent = () => {
   useEffect(() => {
     fetchData();
   }, [alteracaoTarefas]);
-
-  console.log("listaTarefas ==>> ", listaTarefas);
+ 
   const editar = (id, relevancia, title, checked) => {
     const tarefa = {
       id: id,
@@ -63,7 +62,7 @@ const MainComponent = () => {
     const tarefa = {
       relevance: "baixa",
       title: inputValue,
-      completed: "false",
+      completed: false,
     };
     controle.incluir(tarefa);
     setAlteracaoTarefas(!alteracaoTarefas);

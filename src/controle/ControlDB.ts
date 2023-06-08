@@ -32,7 +32,7 @@ export default class ControlDb {
   }
 
   public excluir(id: number) {
-    console.log('excluir dentro de ControlDB')
+     
     const _id: string = id.toString();
     this.control.excluir(_id);
   }
