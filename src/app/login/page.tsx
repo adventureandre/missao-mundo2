@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full mx-auto p-6 bg-[#23262c] rounded-lg drop-shadow-[0px_5px_10px_rgba(0,0,0)]">
-        <h1 className="text-3xl text-center mb-6">Login Tasks!</h1>
+        <h1 className="text-3xl text-center mb-6">Login</h1>
         <form>
           <div className="mb-4">
             <label className="block mb-2" htmlFor="username">Usuário:</label>
