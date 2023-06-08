@@ -39,7 +39,7 @@ const MainComponent = () => {
   }, [alteracaoTarefas]);
 
   console.log("listaTarefas ==>> ", listaTarefas);
-  const salvar = (id, relevancia, title, checked) => {
+  const editar = (id, relevancia, title, checked) => {
     const tarefa = {
       id: id,
       relevance: relevancia,
@@ -85,6 +85,7 @@ const MainComponent = () => {
           key={tarefa.id}
           tarefa={tarefa}
           salvar={salvar}
+          editar={editar}
           excluir={excluirTarefa}
           onToggle={onToggle}
         />

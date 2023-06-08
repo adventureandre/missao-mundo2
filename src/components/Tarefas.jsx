@@ -5,7 +5,7 @@ import { FiEdit, FiCheckCircle, FiXCircle } from "react-icons/fi";
 import TarefasOpen from "@/components/TarefasOpen";
 import { toast } from "react-toastify";
 
-const Tarefas = ({ tarefa, salvar, excluir, onToggle }) => {
+const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
   const [itemContent, setItemContent] = useState(null);
 
   //OBS olhar se vai precisar dessa State
@@ -14,7 +14,7 @@ const Tarefas = ({ tarefa, salvar, excluir, onToggle }) => {
 
   const editTask = (id) => {
     if (id) {
-      setItemContent(<TarefasOpen props={tarefa} />);
+      setItemContent(<TarefasOpen tarefa={tarefa} editar={editar} />);
     }
   };
 

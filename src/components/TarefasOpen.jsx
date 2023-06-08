@@ -6,7 +6,6 @@ import { ITask } from "../modelo/iTarefa";
 
 const TarefasOpen = (props) => {
   const [formData, setFormData] = useState({ title: props.props.title, relevance: props.props.relevance });
-  const [isConfirmed, setIsConfirmed] = useState(false);
 
   const controle= new ControleTarefas() 
 
@@ -22,17 +21,11 @@ const TarefasOpen = (props) => {
     }
     console.log('confirmação da edição ==>> ',tarefa)
     controle.editar(tarefa)
-    setIsConfirmed(true);
     window.location.reload();//--->>> Dá um "F5" na página.
   };
 
   const CancelClick = () =>{
-    setIsConfirmed(true);
     window.location.reload();//--->>> Dá um "F5" na página.
-  }
-
-  if (isConfirmed) {
-    return null; // Descarrega o componente
   }
 
   return (
