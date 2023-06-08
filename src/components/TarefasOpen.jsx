@@ -12,8 +12,7 @@ const TarefasOpen = ({tarefa,editar}) => {
 
   const ConfirmClick = () => {
     console.log('confirmação da edição ==>> ',tarefa)
-    controle.editar(formData)
-    window.location.reload();//--->>> Dá um "F5" na página.
+    editar(formData)
   };
 
   const CancelClick = () =>{
