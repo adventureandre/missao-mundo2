@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineCheckCircle,AiOutlineCloseCircle } from "react-icons/ai";
-
 import ControleTarefas from "../controle/ControleTarefas";
-import { ITask } from "../modelo/iTarefa";
 
 const TarefasOpen = ({tarefa,editar}) => {
   const [formData, setFormData] = useState({id:tarefa.id, title: tarefa.title, relevance: tarefa.relevance,completed: tarefa.completed });
