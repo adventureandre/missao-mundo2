@@ -26,12 +26,17 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
 
   console.log(tarefa);
 
-  const relevanciaClasses =
-    tarefa.relevance === "medium"
-      ? "border-l-4 border-yellow-400 border-solid rounded-lg"
-      : tarefa.relevance === "high"
-      ? "border-l-4 border-red-500 border-solid rounded-lg"
-      : "";
+  const relevanciaClasses = (() => {
+    switch (tarefa.relevance) {
+      case "medium":
+        return "border-l-4 border-yellow-400 border-solid rounded-lg";
+      case "high":
+        return "border-l-4 border-red-500 border-solid rounded-lg";
+      default:
+        return "";
+    }
+  })();
+
 
   return (
     <div
