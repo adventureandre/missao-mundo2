@@ -45,11 +45,9 @@ export default class ControleTarefas {
   constructor() {
     if (useDB) {
       this.control = new ControlDb();
-      console.log("utilizando o mongoDB como provider ");
        
     } else {
       this.control = new ControlArray();
-      console.log("utilizando o array como provider ");
     }
   }
 
@@ -67,7 +65,6 @@ export default class ControleTarefas {
   }
 
   public excluir(id: number) {
-    console.log('controle tarefas excluir',id)
     this.control.excluir(id);
   }
 

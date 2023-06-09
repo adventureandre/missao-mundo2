@@ -21,16 +21,20 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
   const notify = (text) => toast.error(`Tarefa: "${text}" Excluida!`);
 
   const handleCheckboxChange = (e) => {
-    console.log("evento handleCheckboxChange");
     setIsChecked(e.target.checked);
   };
 
-  const relevanciaClasses =
-    tarefa.relevancia === "importante"
-      ? "border-l-4 border-yellow-400 border-solid rounded-lg"
-      : tarefa.relevancia === "urgente"
-      ? "border-l-4 border-red-500 border-solid rounded-lg"
-      : "";
+  const relevanciaClasses = (() => {
+    switch (tarefa.relevance) {
+      case "medium":
+        return "border-l-4 border-yellow-400 border-solid rounded-lg";
+      case "high":
+        return "border-l-4 border-red-500 border-solid rounded-lg";
+      default:
+        return "";
+    }
+  })();
+
 
   return (
     <div

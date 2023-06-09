@@ -41,9 +41,8 @@ const TarefasOpen = ({tarefa,editar,open,setExibirTarefa}) => {
                 value={formData.relevance}
                 onChange={(e) => setFormData({ ...formData, relevance: e.target.value })}
             >
-              <option value="none">Nenhuma</option>
               <option value="high">Alta</option>
-              <option value="low">Baixa</option>
+              <option value="baixa">Baixa</option>
               <option value="medium">Média</option>
             </select>
           </div>
