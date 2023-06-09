@@ -6,7 +6,7 @@ import TarefasOpen from "@/components/TarefasOpen";
 import { toast } from "react-toastify";
 
 const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
-  const [itemContent, setItemContent] = useState(null);
+  const[exibirTarefa, setExibirTarefa] = useState(false)
 
   //OBS olhar se vai precisar dessa State
   // as mudancas de checke ja esta sendo feita direto no iten do objeto
@@ -14,7 +14,7 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
 
   const editTask = (id) => {
     if (id) {
-      setItemContent(<TarefasOpen tarefa={tarefa} editar={editar} />);
+      setExibirTarefa(true)
     }
   };
 
@@ -79,7 +79,7 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
           </div>
         </div>
       </div>
-      {itemContent}
+      <TarefasOpen open={exibirTarefa} tarefa={tarefa} editar={editar} setExibirTarefa={setExibirTarefa} />
     </div>
   );
 };
