@@ -83,9 +83,13 @@ porem devido a problemas tecnicos com mudança de versão do NextJs de ultima ho
 ## Tecnologias
 
 . NextJs
+
 . TailWindcss
+
 . Java scrip
+
 . MongoDb
+
 . Type script
 
 ### Instalação
