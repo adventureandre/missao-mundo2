@@ -61,7 +61,6 @@ switch (DEF_CONEXAO) {
     URL_SELECIONADA = URL_MONGO_USER;
     break;
   case TipoConexao.MONGO_COM_AUTENTICACAO:
-    console.log("conexão sem autenticação atlas mongoDb");
     URL_SELECIONADA = URL_MONGO_USER;
     break;
  
