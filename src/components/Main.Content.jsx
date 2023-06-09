@@ -50,7 +50,6 @@ const MainComponent = () => {
     };
 
     const excluirTarefa = (id) => {
-        console.log("excluirTarefa", id);
         controle.excluir(id);
         //fetchData()
         setAlteracaoTarefas(!alteracaoTarefas);

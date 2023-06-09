@@ -73,10 +73,8 @@ export default class ControleTarefasArray implements IControleTarefas {
 
   public incluir(novaTarefa: Tarefa): void {
     novaTarefa.id=this.obterMaiorId()
-    console.log('novaTarefa',novaTarefa) 
     this.tarefas.push(novaTarefa);
     this.saveItems();
-    console.log("tarefa incluir no array", this.tarefas);
   }
 
   private saveItems(): void {
@@ -101,7 +99,6 @@ export default class ControleTarefasArray implements IControleTarefas {
 
   public excluir(id: number): void {
     this.tarefas = this.tarefas.filter((tarefa) => tarefa.id !== id);
-    console.log("tarefa excluida no array", this.tarefas);
     this.saveItems();
     
   }

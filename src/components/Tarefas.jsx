@@ -24,8 +24,6 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
     setIsChecked(e.target.checked);
   };
 
-  console.log(tarefa);
-
   const relevanciaClasses = (() => {
     switch (tarefa.relevance) {
       case "medium":
