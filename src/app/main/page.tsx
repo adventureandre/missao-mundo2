@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Login() {
+export default function Main() {
   return (
     <div className="max-w-[1000px] mx-auto min-h-[50vh] flex items-center">
       <div className="container bg-[#23262c] drop-shadow-[0px_5px_10px_rgba(0,0,0,0.60)] mx-auto rounded-[20px] w-9/12 mt-5 px-10 py-10">
