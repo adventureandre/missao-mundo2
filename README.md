@@ -86,11 +86,11 @@ porem devido a problemas tecnicos com mudança de versão do NextJs de ultima ho
 
 . TailWindcss
 
-. Java scrip
+. Java Script
 
 . MongoDb
 
-. Type script
+. Type Script
 
 ### Instalação
 Siga as etapas abaixo para configurar o ambiente:
