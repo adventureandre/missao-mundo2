@@ -78,7 +78,7 @@
 ##Persistência dos dados
 
    O projeto foi desenvolvido para persistir seus dados tanto para Localstorage (modo default) assim como para o banco MongoDb estando instalado , para isso bastaria configurar as informações pertinentes ao banco em .env  e ativar a opção ATIVE_DB= true em 'setDB.ts'
-porem devido a problemas tecnicos com mudança de versão do NextJs não consegui concluir a adaptação do acesso ao mongoDB a tempo.     
+porem devido a problemas tecnicos com mudança de versão do NextJs de ultima hora, não foi possível concluir a adaptação do acesso ao mongoDB a tempo.     
   
   
 
