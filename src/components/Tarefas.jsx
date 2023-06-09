@@ -21,14 +21,15 @@ const Tarefas = ({ tarefa, editar, excluir, onToggle }) => {
   const notify = (text) => toast.error(`Tarefa: "${text}" Excluida!`);
 
   const handleCheckboxChange = (e) => {
-    console.log("evento handleCheckboxChange");
     setIsChecked(e.target.checked);
   };
 
+  console.log(tarefa);
+
   const relevanciaClasses =
-    tarefa.relevancia === "importante"
+    tarefa.relevance === "medium"
       ? "border-l-4 border-yellow-400 border-solid rounded-lg"
-      : tarefa.relevancia === "urgente"
+      : tarefa.relevance === "high"
       ? "border-l-4 border-red-500 border-solid rounded-lg"
       : "";
 
