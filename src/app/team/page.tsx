@@ -53,7 +53,7 @@ export default function Team() {
             />
             <div className="font-medium dark:text-white">
               <div>Andre Luiz</div>
-              <div className="text-sm text-gray-300 dark:text-gray-400">Matricula: </div>
+              <div className="text-sm text-gray-300 dark:text-gray-400">Matricula: 202208604943</div>
             </div>
           </div>
         </div>
