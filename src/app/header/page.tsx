@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <div className='flex justify-between w-[100%] p-[20px]'>
+      <div className='flex justify-between max-w-[800px] mx-auto py-[20px] px-[10px]'>
         <Link href="/" className="pointer">
           <Image
             src="/Tasks.svg"
@@ -25,13 +25,10 @@ export default function Header() {
             alt="logo" />
         </Link>
         <div className='flex gap-2'>
-          <Link href="/team">
-            <button type="button" className="bg-transparent border hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-xl text-sm px-5 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2">Team</button>
-          </Link>
 
           {session?.user && (
             <Link href="/todo">
-              <button className="bg-transparent border hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-xl text-sm px-5 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2" type="button">Acessar To-do-List
+              <button className="bg-transparent border hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-xl text-sm px-5 py-3 text-center inline-flex items-center dark:focus:ring-gray-900 dark:hover:bg-[#050708]/30 mr-2 mb-2" type="button">Acessar Tarefas
               </button></Link>
           )}
 
