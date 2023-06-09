@@ -93,7 +93,7 @@ export default function Team() {
               alt="logo"
             />
             <div className="font-medium dark:text-white">
-              <div>Hemerson Gregorio </div>
+              <div>Emerson Gregorio </div>
               <div className="text-sm text-gray-300 dark:text-gray-400">Matricula: 202209084986</div>
             </div>
           </div>
