@@ -5,9 +5,9 @@
 
 /* Adicionar aqui algum css adicional, para sobrescrever o Tailwind */
 body {
-  @apply 
-  bg-[#05a374]
-  text-gray-100
+  @apply bg-[#05a374]
+  max-h-[100vh]
+  text-gray-100;
 }
 
 h1 {
