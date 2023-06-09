@@ -4,15 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { FiLogOut } from 'react-icons/fi'
 
-
-const getCurrentBaseUrl = () => {
-  const { protocol, host } = window.location;
-  return `${protocol}//${host}`;
-};
-
-const baseUrl = getCurrentBaseUrl();
-
-
 import { useSession, signIn, signOut } from 'next-auth/react'
 import BtSingInGoogle from '@/components/BtSingInGoogle';
 
@@ -35,7 +26,7 @@ export default function Header() {
         <div className='flex gap-2'>
 
           {session?.user && (
-            <Link href={`${baseUrl}/todo`}>
+            <Link href="/todo">
               <button className="bg-transparent border hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-xl text-sm px-5 py-3 text-center inline-flex items-center dark:focus:ring-gray-900 dark:hover:bg-[#24292f] mr-2 mb-2" type="button">Acessar Tarefas
               </button></Link>
           )}
