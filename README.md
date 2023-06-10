@@ -92,9 +92,28 @@ porem devido a problemas tecnicos com mudança de versão do NextJs de ultima ho
 
 . Type Script
 
+### Instalação utilizando docker
+Siga as etapas abaixo para configurar o ambiente:
+
+1. Clone este repositório:
+   ```shell
+   git clone https://github.com/adventureandre/missao-mundo2
+
+2. Execute o Docker:
+   ```shell
+   docker-compose up -d
+
 ### Instalação
 Siga as etapas abaixo para configurar o ambiente:
 
 1. Clone este repositório:
    ```shell
    git clone https://github.com/adventureandre/missao-mundo2
+
+2. Execute o NPM INSTALL:
+   ```shell
+   npm i
+
+3. Rode o projeto :
+   ```shell
+   npm run dev
