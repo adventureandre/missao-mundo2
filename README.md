@@ -113,6 +113,7 @@ Siga as etapas abaixo para configurar o ambiente:
 2. Execute o NPM INSTALL:
    ```shell
    npm i
+   
 
 3. Rode o projeto :
    ```shell
